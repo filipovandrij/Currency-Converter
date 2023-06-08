@@ -1,0 +1,37 @@
+<main>
+  <section class="main_title container">
+    <h3>Currency Converter</h3>
+    <p>Any conversion is made through UAH</p>
+  </section>
+  <section class="currency_form container">
+    <div class="first_form">
+      <select [(ngModel)]="selectedCurrency">
+        <option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </option>
+      </select>
+
+      <input
+        type="text"
+        [(ngModel)]="inputValue"
+        (ngModelChange)="convertCurrency()"
+      />
+    </div>
+    <div class="two-arrows">
+      <div class="arrow-left"></div>
+      <div class="arrow-left flip-element"></div>
+    </div>
+    <div class="second_form">
+      <select [(ngModel)]="selectedCurrency2">
+        <option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency }}
+        </option>
+      </select>
+      <input
+        type="text"
+        [(ngModel)]="convertedValue"
+        (ngModelChange)="convertBackCurrency()"
+      />
+    </div>
+  </section>
+</main>

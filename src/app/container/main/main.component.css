@@ -1,0 +1,179 @@
+.main_title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.main_title p { 
+    font-size: 10px;
+}
+
+.currency_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .container{
+    margin: 16px 16px 0;
+  }
+  
+  .first_form,
+  .second_form {
+    display: flex;
+  }
+  
+  .first_form select,
+  .second_form select,
+  .first_form input,
+  .second_form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .first_form select,
+  .second_form select {
+    margin-right: 8px;
+    width: 80px;
+    background-color:#FAD120 ;
+  }
+  
+  .first_form input,
+  .second_form input {
+    width: 200px;
+  }
+  
+  .first_form select:focus,
+  .second_form select:focus,
+  .first_form input:focus,
+  .second_form input:focus {
+    outline: none;
+    border-color: #FAD120;
+    box-shadow: 0 0 5px #FAD120;
+  }
+  
+  .first_form input::placeholder,
+  .second_form input::placeholder {
+    color: #999;
+  }
+  
+  .first_form input[type="text"],
+  .second_form input[type="text"] {
+    text-align: right;
+  }
+
+  .two-arrows{
+    display: flex;
+    align-items: center;gap: 20px;
+  }
+  
+  .arrow-left {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 16px solid transparent;
+  border-bottom: 16px solid transparent;
+  border-right: 16px solid #FAD120;
+    animation: arrowBlink 2s infinite;
+  }
+  
+  @keyframes arrowBlink {
+    0% {
+      opacity: 1;
+    }
+    10% {
+      opacity: 0.9;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    30% {
+      opacity: 0.7;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    70% {
+      opacity: 0.7;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    90% {
+      opacity: 0.9;
+    }
+     100% {
+      opacity: 1;
+    }
+  }
+  
+
+  .flip-element {
+    transform: scaleX(-1);
+  }
+
+  @media (max-width: 576px) {
+    .arrow-left {
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid #FAD120;
+      animation-duration: 1s;
+    }
+    .two-arrows{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        transform: rotate(90deg);
+      }
+    
+    .container {
+        margin: 8px;
+      }
+      .currency_form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .first_form select,
+      .second_form select,
+      .first_form input,
+      .second_form input {
+        padding: 8px;
+        font-size: 14px;
+      }
+  }
+  
+  /* Media queries for tablets */
+  @media (min-width: 577px) and (max-width: 992px) {
+    .arrow-left {
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-right: 14px solid #FAD120;
+      animation-duration: 1.5s;
+    }
+    .container {
+        margin: 12px;
+      }
+      
+      .first_form select,
+      .second_form select,
+      .first_form input,
+      .second_form input {
+        padding: 8px;
+        font-size: 14px;
+      }
+  }
+
+
+  
