@@ -24,6 +24,10 @@ header{
     justify-content: center;
     gap: 20px;
 }
+.uah{
+  margin: 0 4px;
+  opacity: 0.5;
+}
 
 .currency div{
     display: flex;
