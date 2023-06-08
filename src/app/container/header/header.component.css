@@ -17,6 +17,7 @@ header{
     height: 20px;
     width: 20px;
     margin-right: 4px;
+    border-radius: 5px;
 }
 
 .currency{
